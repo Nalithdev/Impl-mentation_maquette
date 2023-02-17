@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 18px;
+  font-family: "Inter", sans-serif;
+}
+
+#mySidenav {
+  display: none;
 }
 
 body {
@@ -24,6 +29,10 @@ body header .Logo {
 body header .Logo img {
   padding-left: 20px;
   width: 250px;
+}
+body header svg {
+  width: 50px;
+  height: 50px;
 }
 body header nav {
   grid-row: 2/3;
@@ -63,6 +72,10 @@ body header nav ul li {
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+}
+body header nav ul li svg {
+  width: 50px;
+  height: 30px;
 }
 body header .Logout {
   background: none;
@@ -110,7 +123,7 @@ body .Main_space .main_head .searchbar input {
 }
 body .Main_space .main_zone1 {
   display: flex;
-  padding: 20px;
+  padding: 10px;
   justify-content: space-between;
   width: 90%;
 }
@@ -145,7 +158,7 @@ body .Main_space .main_zone1 .Tabs_bar {
   border-radius: 10px;
 }
 body .Main_space .main_zone1 .Tabs_bar ul {
-  padding: 15px;
+  padding: 10px;
   display: flex;
   gap: 25px;
   justify-content: center;
@@ -163,33 +176,67 @@ body .Main_space .main_zone1 .Tabs_bar ul li:hover {
   background-color: black;
   transition: 1s;
 }
-body .Main_space .graph_zone {
-  height: 60%;
-  background-color: azure;
+body .Main_space .graph {
+  background-color: #333131;
   border-radius: 20px;
+}
+body .Main_space .bargraph {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+}
+body .Main_space .bargraph ul {
+  display: flex;
+  gap: 10px;
+}
+body .Main_space .bargraph ul li {
+  list-style: none;
+  background-color: black;
+  padding: 5px;
+  color: white;
+}
+body .Main_space .bargraph ul li:hover {
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+body .Main_space .bargraph .echange {
+  display: flex;
+  gap: 10px;
+}
+body .Main_space .bargraph .echange div {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+body .Main_space #graph_zone {
+  height: 60%;
+  border-radius: 20px;
+  width: 400px;
+  z-index: -1;
 }
 body .Main_space .Transaction {
   display: flex;
   flex-direction: column;
-  height: 125px;
-  justify-content: space-around;
+  gap: 15px;
 }
-body .Main_space .Transaction .bitcoin {
+body .Main_space .Transaction .Tall {
   background-color: rgba(58, 54, 54, 0.81);
   display: flex;
   color: white;
   justify-content: space-around;
   border-radius: 20px;
+  align-items: center;
 }
-body .Main_space .Transaction .etherium {
-  background-color: rgba(58, 54, 54, 0.81);
-  display: flex;
-  color: white;
-  justify-content: space-around;
-  border-radius: 20px;
+body .Main_space .Transaction .Tall .data p {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.8rem;
 }
 body .Main_space .Transaction .trade {
-  padding: 10px;
+  padding: 5px;
 }
 body .Main_space .Transaction .trade p {
   padding: 5px;
@@ -197,6 +244,240 @@ body .Main_space .Transaction .trade p {
   padding-right: 10px;
   border-radius: 20px;
   background-color: black;
+}
+body .Second_space {
+  overflow-y: scroll;
+  height: 100vh;
+}
+body .Second_space .space2_head {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+body .Second_space .space2_head .notif {
+  width: 40px;
+  height: 50px;
+}
+body .Second_space .transaction {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 30px;
+  gap: 30px;
+}
+body .Second_space .transaction h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+body .Second_space .transaction .transdata {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+body .Second_space .transaction .transdata .Fdata {
+  display: flex;
+  gap: 20px;
+}
+body .Second_space .transaction .transdata .Fdata img {
+  width: 50px;
+  height: 50px;
+}
+body .Second_space .blue {
+  color: #1970D6;
+}
+body .Second_space .win {
+  color: #04b221;
+}
+body .Second_space .violet {
+  color: purple;
+}
+body .Second_space .lose {
+  color: red;
+}
+body .Second_space .Assets {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body .Second_space .Assets h3 {
+  padding: 0;
+  margin-bottom: 0;
+}
+body .Second_space .Assets .AData {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border-radius: 30px;
+  padding: 10px;
+}
+body .Second_space .Assets .AData p {
+  padding: 10px;
+}
+body .Second_space .Assets .AData div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .Second_space .Assets .AData div p {
+  font-size: 1.2rem;
+}
+body .Second_space .Assets .Bit {
+  background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);
+}
+body .Second_space .Assets .Eth {
+  background: linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%);
+  color: black;
+}
+
+@media only screen and (max-width: 1280px) {
+  body {
+    width: 100%;
+    display: block;
+    padding: 20px;
+  }
+  body header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body header svg {
+    width: 30px;
+    height: 20px;
+  }
+  body header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body header nav ul li p {
+    font-size: 0.75rem;
+  }
+  body header .Logout {
+    position: relative;
+    width: auto;
+  }
+  body header .Logout p {
+    font-size: 0.75rem;
+  }
+  body #coucou {
+    display: none;
+  }
+  body .Second_space {
+    height: auto;
+  }
+  #mySidenav {
+    display: block;
+  }
+  .sidenav {
+    display: initial;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    overflow-y: scroll;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(117, 117, 117);
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav a a:hover {
+    color: white;
+  }
+  .sidenav a .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .Menu {
+    display: flex;
+    cursor: pointer;
+    height: 110%;
+    margin-right: 1.5%;
+    margin-top: 1%;
+  }
+  .side-active {
+    height: auto;
+  }
+  .menu-overlay-active {
+    height: 70vh;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body .Logo {
+    margin: 0 auto;
+  }
+  body .Main_space .main_zone1 .Tabs_bar {
+    height: 50px;
+  }
+  body .Main_space .main_zone1 .Tabs_bar ul li {
+    font-size: 0.5rem;
+    padding: 5px;
+  }
+  body .Main_space .graph {
+    background-color: #333131;
+    border-radius: 20px;
+  }
+  body .Main_space .bargraph {
+    display: flex;
+    justify-content: space-around;
+  }
+  body .Main_space .bargraph ul {
+    display: flex;
+    gap: 5px;
+  }
+  body .Main_space .bargraph ul li {
+    list-style: none;
+    background-color: black;
+    font-size: 0.7rem;
+    padding: 5px;
+    color: white;
+  }
+  body .Main_space .bargraph ul li:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+  }
+  body .Main_space .bargraph .echange {
+    display: flex;
+    gap: 10px;
+  }
+  body .Main_space .bargraph .echange div {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+  }
+  body .Main_space .bargraph .echange div p {
+    font-size: 0.7rem;
+  }
+  body .Main_space .bargraph .echange div svg {
+    height: 20px;
+    width: 20px;
+  }
+  body .Main_space .bargraph .Transaction .Tall .data p {
+    font-size: 0.75rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

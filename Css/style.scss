@@ -3,68 +3,90 @@
   margin:0;
   box-sizing:border-box;
   font-size: 18px;
+  font-family: 'Inter', sans-serif;
 }
-
-body{
+#mySidenav{
+  display: none;
+}
+body {
   display: grid;
   grid-template-columns: 1fr 3fr 1.5fr;
   background-color: black;
 
-  header{
-    grid-column: 1/2  ;
+
+  header {
+    grid-column: 1/2;
 
     display: grid;
     grid-template-rows: 20vh 60vh 20vh;
-    .Logo{
+
+    .Logo {
       grid-row: 1/2;
       align-items: center;
       display: flex;
       justify-content: center;
-      img{
+
+      img {
         padding-left: 20px;
         width: 250px;
       }
     }
-    nav{
+    svg{
+      width: 50px;
+      height: 50px;
+    }
+
+    nav {
       grid-row: 2/3;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
       color: white;
-      div{
+
+      div {
         border-radius: 10px;
         background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
         align-items: center;
         display: flex;
         gap: 15px;
-        padding: 10px ;
+        padding: 10px;
         padding-left: 15px;
         padding-right: 15px;
-        img{
+
+        img {
           width: 25px;
         }
-        h2{
+
+        h2 {
           color: black;
           font-size: 1.5rem;
         }
       }
-      ul{
+
+      ul {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: start;
         height: auto;
-        li{
+
+        li {
           padding: 10px;
           list-style: none;
-          font-size: 1.2rem ;
+          font-size: 1.2rem;
           display: flex;
           align-items: center;
+          svg{
+            width: 50px;
+            height: 30px;
+
+          }
         }
       }
     }
-    .Logout{
+
+    .Logout {
       background: none;
       grid-row: 3/4;
       color: white;
@@ -76,31 +98,36 @@ body{
       left: 5%;
     }
   }
-  .Main_space{
+
+  .Main_space {
     grid-column: 2/3;
     width: 100%;
-    .main_head{
+
+    .main_head {
       display: flex;
       justify-content: space-between;
       padding: 20px;
-      h1{
+
+      h1 {
         color: white;
         font-size: 1.7rem;
       }
-      .searchbar{
+
+      .searchbar {
         background-color: white;
         width: 60%;
         height: 50px;
         border-radius: 10px;
         align-items: center;
 
-        form{
+        form {
           display: flex;
           justify-content: space-between;
           border: solid black 2px;
           border-radius: 10px;
         }
-        input{
+
+        input {
           width: 85%;
           height: 49px;
           border-radius: 10px;
@@ -109,23 +136,28 @@ body{
         }
       }
     }
-    .main_zone1{
+
+    .main_zone1 {
       display: flex;
-      padding: 20px;
+      padding: 10px;
       justify-content: space-between;
       width: 90%;
-      div:nth-of-type(1){
+
+      div:nth-of-type(1) {
         color: rgba(255, 255, 255, 0.71);
         font-size: 1.2rem;
         width: auto;
-        .stats{
+
+        .stats {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          p{
+
+          p {
             color: white;
           }
-          p:nth-of-type(2){
+
+          p:nth-of-type(2) {
             background-color: #FAFF00;
             border-radius: 5px;
             color: black;
@@ -135,30 +167,35 @@ body{
 
           }
         }
-        p{
+
+        p {
 
           padding: 7.5px;
         }
       }
-      .Tabs_bar{
+
+      .Tabs_bar {
         background-color: rgba(58, 54, 54, 0.81);
         height: 60px;
         align-items: center;
         border-radius: 10px;
-        ul{
-          padding: 15px;
+
+        ul {
+          padding: 10px;
           display: flex;
           gap: 25px;
           justify-content: center;
           align-items: center;
-          li{
+
+          li {
             color: white;
             list-style: none;
             padding: 5px;
             padding-right: 10px;
             padding-left: 10px;
             border-radius: 10px;
-            &:hover{
+
+            &:hover {
               background-color: black;
               transition: 1s;
             }
@@ -166,42 +203,394 @@ body{
         }
       }
     }
-    .graph_zone{
-      height: 60%;
-      background-color: azure;
+    .graph{
+      background-color: #333131;
       border-radius: 20px;
     }
-    .Transaction{
+    .bargraph{
       display: flex;
-      flex-direction: column;
-      height: 125px;
       justify-content: space-around;
-      .bitcoin{
-        background-color: rgba(58, 54, 54, 0.81);
+      height: 30px;
+
+
+
+
+      ul{
         display: flex;
-        color: white;
-        justify-content: space-around;
-        border-radius: 20px;
-      }
-      .etherium{
-        background-color: rgba(58, 54, 54, 0.81);
-        display: flex;
-        color: white;
-        justify-content: space-around;
-        border-radius: 20px;
+        gap: 10px;
+        li{
+          list-style: none;
+            background-color: black;
+          padding: 5px;
+          color: white;
+          &:hover{
+            background-color: white;
+            color: black;
+            transition: 1s;
+          }
+        }
 
       }
-      .trade{
-        padding: 10px;
-        p{
+      .echange{
+        display: flex;
+        gap:10px;
+        div{
+        background-color: black;
+        color: white;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 5px;
+        }
+      }
+
+    }
+    #graph_zone {
+      height: 60%;
+      border-radius: 20px;
+      width: 400px;
+      z-index: -1;
+    }
+
+    .Transaction {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .Tall {
+        background-color: rgba(58, 54, 54, 0.81);
+        display: flex;
+        color: white;
+        justify-content: space-around;
+        border-radius: 20px;
+        align-items: center;
+
+        .data{
+          p{
+          color: rgba(255, 255, 255, 0.71);
+          font-size: 0.8rem;
+          }
+        }
+      }
+
+
+
+      .trade {
+        padding: 5px;
+
+        p {
           padding: 5px;
           padding-left: 10px;
           padding-right: 10px;
           border-radius: 20px;
-        background-color: black;
+          background-color: black;
+
         }
       }
     }
 
+  }
+.Second_space{
+  overflow-y: scroll;
+  height: 100vh;
+
+  .space2_head {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+    .notif{
+      width: 40px;
+      height: 50px;
+
+    }
+  }
+
+
+  .transaction {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 30px;
+    gap: 30px ;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    .transdata{
+      display: flex;
+      color: white;
+      justify-content: space-between;
+
+      .Fdata{
+        display: flex;
+        gap: 20px;
+        img{
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+
+  }
+  .blue {
+    color: #1970D6;
+  }
+  .win {
+    color: #04b221;
+  }
+  .violet {
+    color: purple;
+  }
+  .lose {
+    color: red;
+  }
+  .Assets{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    h3{
+      padding: 0;
+      margin-bottom: 0;
+    }
+    .AData{
+      display: flex;
+      flex-direction: column;
+      color: white;
+      border-radius: 30px;
+      padding: 10px;
+
+      p{
+        padding: 10px;
+      }
+      div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .Bit{
+      background: linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%);
+
+    }
+    .Eth{
+      background: linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%);
+      color: black;
+    }
+  }
+
+}
+
+}
+@media only screen and (max-width: 1280px) {
+  body{
+    width: 100%;
+    display: block;
+    padding: 20px;
+    header{
+      display: flex;
+
+      flex-wrap: wrap;
+      svg{
+        width: 30px;
+        height: 20px;
+      }
+      nav{
+        display: flex;
+        flex-direction: row;
+
+        flex-wrap: wrap;
+        ul{
+          display: flex;
+          flex-direction: row;
+
+          flex-wrap: wrap;
+
+
+          li{
+            p{
+            font-size: 0.75rem
+          }
+          }
+        }
+
+
+
+      }
+      .Logout{
+        position: relative;
+        width: auto;
+        p{
+        font-size: 0.75rem;
+      }
+      }
+    }
+
+
+      #coucou{
+        display: none;
+      }
+    .Second_space{
+      height: auto;
+    }
+  }
+#mySidenav{
+  display: block;
+}
+  .sidenav {
+    display: initial;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    overflow-y: scroll;
+
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: rgb(117, 117, 117);
+      display: block;
+      transition: 0.3s;
+      a:hover {
+        color: white;
+      }
+
+      .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+    }
+  }
+  .Menu{
+    display: flex;
+
+    cursor:pointer;
+    height: 110%;
+    margin-right: 1.5%;
+    margin-top: 1%;
+  }
+
+
+
+
+  .side-active{
+
+    height:auto;
+
+  }
+  .menu-overlay-active {
+    height:70vh;
+  }
+
+a{
+  color: black;
+  text-decoration: none;
+
+}
+
+
+}
+@media only screen and (max-width: 700px) {
+  body {
+    .Logo {
+      margin: 0 auto;
+    }
+
+    .Main_space {
+      .main_zone1 {
+        .Tabs_bar {
+          height: 50px;
+
+          ul {
+            li {
+              font-size: 0.5rem;
+              padding: 5px;
+            }
+
+          }
+        }
+
+      }
+
+      .graph {
+        background-color: #333131;
+        border-radius: 20px;
+      }
+
+      .bargraph {
+        display: flex;
+        justify-content: space-around;
+
+
+
+        ul {
+          display: flex;
+          gap: 5px;
+
+          li {
+            list-style: none;
+            background-color: black;
+            font-size: 0.7rem;
+            padding: 5px;
+            color: white;
+
+            &:hover {
+              background-color: white;
+              color: black;
+              transition: 1s;
+            }
+          }
+
+        }
+
+        .echange {
+          display: flex;
+          gap: 10px;
+
+          div {
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px;
+            p{
+              font-size: 0.7rem;
+            }
+            svg{
+              height: 20px;
+              width: 20px;
+            }
+
+          }
+        }
+
+
+        .Transaction {
+          .Tall {
+            .data {
+              p {
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
