@@ -6,6 +6,15 @@
   font-family: "Inter", sans-serif;
 }
 
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 100px;
+}
+
 #mySidenav {
   display: none;
 }
