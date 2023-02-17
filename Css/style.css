@@ -221,7 +221,8 @@ body .Main_space #graph_zone {
 body .Main_space .Transaction {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  margin-top: 5px;
+  gap: 5px;
 }
 body .Main_space .Transaction .Tall {
   background-color: rgba(58, 54, 54, 0.81);
